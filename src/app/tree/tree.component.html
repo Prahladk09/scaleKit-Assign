@@ -1,0 +1,11 @@
+<div *ngFor="let node of data | keyvalue">
+    <label>
+      <input type="checkbox" />
+      {{ node.key }}
+    </label>
+  
+    <div style="margin-left: 20px;" *ngIf="node.value">
+      <app-tree [data]="node.value"></app-tree>
+    </div>
+  </div>
+  
